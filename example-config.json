@@ -1,0 +1,77 @@
+{
+  "headers": {
+    "Authorization": "Bearer YOUR_TOKEN_HERE",
+    "Accept": "application/json",
+    "X-Api-Version": "2"
+  },
+  "endpoints": [
+    {
+      "name": "List Users",
+      "url": "https://api.example.com/users",
+      "method": "GET",
+      "headers": {
+        "X-Custom-Header": "custom-value"
+      }
+    },
+    {
+      "name": "Get Single User",
+      "url": "https://api.example.com/users/1",
+      "method": "GET"
+    },
+    {
+      "name": "Create User",
+      "url": "https://api.example.com/users",
+      "method": "POST",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "body": {
+        "name": "Jane Doe",
+        "email": "jane.doe@example.com",
+        "role": "viewer"
+      }
+    },
+    {
+      "name": "Update User",
+      "url": "https://api.example.com/users/1",
+      "method": "PUT",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "body": {
+        "name": "Jane Doe Updated",
+        "email": "jane.updated@example.com",
+        "role": "admin"
+      }
+    },
+    {
+      "name": "Patch User Status",
+      "url": "https://api.example.com/users/1/status",
+      "method": "PATCH",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "body": {
+        "active": true
+      }
+    },
+    {
+      "name": "Delete User",
+      "url": "https://api.example.com/users/42",
+      "method": "DELETE"
+    },
+    {
+      "name": "List Products",
+      "url": "https://api.example.com/products?page=1&limit=20",
+      "method": "GET"
+    },
+    {
+      "name": "Health Check",
+      "url": "https://api.example.com/health",
+      "method": "GET",
+      "headers": {
+        "Authorization": ""
+      }
+    }
+  ]
+}
