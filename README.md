@@ -176,3 +176,5 @@ MIT © [Craftpipe](https://heijnesdigital.com)
 ## Built with AI
 
 This tool was built with AI assistance by [Craftpipe](https://heijnesdigital.com).
+
+Support: support@heijnesdigital.com
