@@ -1,0 +1,33 @@
+{
+  "name": "api-diff",
+  "version": "1.0.0",
+  "description": "A CLI workflow tool that snapshots, compares, and visualizes changes between REST API responses over time. Point it at any set of endpoints, and it runs a full pipeline: fetches responses, diffs JSON structures (added/removed/changed fields, type changes, status code shifts), detects breaking changes vs. non-breaking changes, and generates a beautiful color-coded terminal report plus a standalone HTML report. Perfect for developers who need to monitor API changes. Built with AI by Craftpipe",
+  "main": "index.js",
+  "bin": {
+    "api-diff": "index.js"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "api",
+    "diff",
+    "cli",
+    "rest",
+    "snapshot",
+    "compare",
+    "json",
+    "breaking-changes"
+  ],
+  "author": "Craftpipe <support@heijnesdigital.com>",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^11.0.0",
+    "node-fetch": "^2.7.0",
+    "deep-diff": "^1.0.2",
+    "chalk": "^4.1.2"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
