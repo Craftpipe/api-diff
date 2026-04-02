@@ -1,6 +1,6 @@
 # Contributing
 
-Thanks for your interest in contributing! Here's how to get started.
+Thanks for your interest in contributing!
 
 ## Reporting Issues
 
@@ -8,27 +8,50 @@ Thanks for your interest in contributing! Here's how to get started.
 - Include steps to reproduce for bugs
 - Check existing issues before creating a new one
 
+## Setup
+
+```bash
+git clone <this-repo>
+npm install
+npm test
+node index.js --help
+```
+
 ## Pull Requests
 
 1. Fork the repository
 2. Create a feature branch: `git checkout -b feat/my-feature`
 3. Make your changes
-4. Run tests: `npm test`
-5. Commit with a clear message: `git commit -m "feat: add my feature"`
+4. Run tests (see below)
+5. Commit: `git commit -m "feat: add my feature"`
 6. Push and open a Pull Request
 
 ## Code Style
 
-- Plain JavaScript (no TypeScript)
-- Use `'use strict'` at the top of every file
+- Plain JavaScript — no TypeScript, no build step
+- `'use strict'` at the top of every file
 - CommonJS modules (`require`/`module.exports`)
 - Handle errors gracefully — no unhandled throws
+- All exported functions must handle `null`/`undefined` arguments without crashing
+- No hardcoded credentials or brand names in source files
 
 ## Testing
 
-- Run tests with `npm test`
-- Add tests for new features
+```bash
+npm test              # run vitest
+npm run test:coverage # run with coverage report
+```
+
+- Tests live in `tests/`
+- Test behavior, not implementation details
+- Test edge cases: null, undefined, empty string, empty array
 - All tests must pass before merging
+
+## Architecture
+
+- `index.js` — CLI entry point (argument parsing, command routing)
+- `lib/*.js` — core modules (each with a single responsibility)
+- `tests/` — vitest unit tests
 
 ## License
 
